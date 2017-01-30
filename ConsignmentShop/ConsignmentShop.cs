@@ -16,5 +16,10 @@ namespace ConsignmentShop
         {
             InitializeComponent();
         }
+
+        private void ConsignmentShop_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

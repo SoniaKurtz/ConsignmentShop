@@ -51,6 +51,7 @@
             this.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.Name = "ConsignmentShop";
             this.Text = "ConsignmentShopDemo";
+            this.Load += new System.EventHandler(this.ConsignmentShop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
