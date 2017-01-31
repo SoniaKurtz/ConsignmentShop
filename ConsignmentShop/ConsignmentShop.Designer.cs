@@ -35,6 +35,10 @@
             this.shoppingCartLabel = new System.Windows.Forms.Label();
             this.shoppingCartListBox = new System.Windows.Forms.ListBox();
             this.makePurchase = new System.Windows.Forms.Button();
+            this.vendorList = new System.Windows.Forms.Label();
+            this.vendorlistBox = new System.Windows.Forms.ListBox();
+            this.storePayoutlebel = new System.Windows.Forms.Label();
+            this.storeProfitlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -76,6 +80,7 @@
             this.addToCart.TabIndex = 3;
             this.addToCart.Text = "Add to Cart ->";
             this.addToCart.UseVisualStyleBackColor = true;
+            this.addToCart.Click += new System.EventHandler(this.addToCart_Click);
             // 
             // shoppingCartLabel
             // 
@@ -106,12 +111,57 @@
             this.makePurchase.TabIndex = 6;
             this.makePurchase.Text = "Purchase";
             this.makePurchase.UseVisualStyleBackColor = true;
+            this.makePurchase.Click += new System.EventHandler(this.makePurchase_Click);
+            // 
+            // vendorList
+            // 
+            this.vendorList.AutoSize = true;
+            this.vendorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.vendorList.Location = new System.Drawing.Point(8, 359);
+            this.vendorList.Name = "vendorList";
+            this.vendorList.Size = new System.Drawing.Size(76, 20);
+            this.vendorList.TabIndex = 8;
+            this.vendorList.Text = "Vendors";
+            // 
+            // vendorlistBox
+            // 
+            this.vendorlistBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.vendorlistBox.FormattingEnabled = true;
+            this.vendorlistBox.ItemHeight = 20;
+            this.vendorlistBox.Location = new System.Drawing.Point(12, 382);
+            this.vendorlistBox.Name = "vendorlistBox";
+            this.vendorlistBox.Size = new System.Drawing.Size(337, 204);
+            this.vendorlistBox.TabIndex = 7;
+            // 
+            // storePayoutlebel
+            // 
+            this.storePayoutlebel.AutoSize = true;
+            this.storePayoutlebel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.storePayoutlebel.Location = new System.Drawing.Point(514, 382);
+            this.storePayoutlebel.Name = "storePayoutlebel";
+            this.storePayoutlebel.Size = new System.Drawing.Size(106, 20);
+            this.storePayoutlebel.TabIndex = 9;
+            this.storePayoutlebel.Text = "Store Profit:";
+            // 
+            // storeProfitlabel
+            // 
+            this.storeProfitlabel.AutoSize = true;
+            this.storeProfitlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.storeProfitlabel.Location = new System.Drawing.Point(626, 382);
+            this.storeProfitlabel.Name = "storeProfitlabel";
+            this.storeProfitlabel.Size = new System.Drawing.Size(54, 20);
+            this.storeProfitlabel.TabIndex = 10;
+            this.storeProfitlabel.Text = "$0.00";
             // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 427);
+            this.ClientSize = new System.Drawing.Size(867, 598);
+            this.Controls.Add(this.storeProfitlabel);
+            this.Controls.Add(this.storePayoutlebel);
+            this.Controls.Add(this.vendorList);
+            this.Controls.Add(this.vendorlistBox);
             this.Controls.Add(this.makePurchase);
             this.Controls.Add(this.shoppingCartLabel);
             this.Controls.Add(this.shoppingCartListBox);
@@ -120,10 +170,9 @@
             this.Controls.Add(this.itemsListBox);
             this.Controls.Add(this.headerText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.Margin = new System.Windows.Forms.Padding(9);
             this.Name = "ConsignmentShop";
             this.Text = "ConsignmentShopDemo";
-            this.Load += new System.EventHandler(this.ConsignmentShop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +187,10 @@
         private System.Windows.Forms.Label shoppingCartLabel;
         private System.Windows.Forms.ListBox shoppingCartListBox;
         private System.Windows.Forms.Button makePurchase;
+        private System.Windows.Forms.Label vendorList;
+        private System.Windows.Forms.ListBox vendorlistBox;
+        private System.Windows.Forms.Label storePayoutlebel;
+        private System.Windows.Forms.Label storeProfitlabel;
     }
 }
 
